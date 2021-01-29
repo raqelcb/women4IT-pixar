@@ -1,14 +1,14 @@
 :root{
     /* Colores principales */
-    --blanco : white;
-    --negro  : black;
+    --white : white;
+    --black  : black;
 
-    --borde-negro : #00000050;
+    --border-black : #00000050;
 
     /* Tipografia */
-    --tipo-principal  : 'Open Sans', sans-serif;
-    --tipo-secundaria : 'Open Sans', sans-serif;
-    --tipo-terciaria  : 'Open Sans', sans-serif;
+    --typo-first  : 'Open Sans', sans-serif;
+    --typo-second : 'Open Sans', sans-serif;
+    --typo-third  : 'Open Sans', sans-serif;
 }
 
 *{  
@@ -41,9 +41,9 @@ img{
 }
 body{
     font-size: 100%;
-    font-family: var(--tipo-principal);
-    background-color: var(--blanco);
-    color:var(--negro);
+    font-family: var(--typo-first);
+    background-color: var(--white);
+    color:var(--black);
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -52,7 +52,7 @@ body{
 
 .header{
     width:100%;
-    background-color: var(--blanco);
+    background-color: var(--white);
     padding: 1.2em 0;    
 }
 
@@ -78,7 +78,7 @@ body{
 }
 .header .content_centered .header_menu .header_item{
      margin: 0 0 0 .8em;
-     font-weight: 600;
+     font-weight: 300;
      float: right;
 }
 
@@ -131,7 +131,7 @@ body{
 }
 .main_grid .content_centered .main_block .main_content{
     width: 100%;
-    font-weight: 700;
+    font-weight: 500;
     
 }
 
@@ -175,7 +175,7 @@ body{
     min-height: 1.2em;
     margin: 0 .8em;
     padding: 0 0 .2em;
-    border-bottom:1px solid var(--borde-negro);
+    border-bottom:1px solid var(--border-black);
     
 }
 .footer .footer_copy{
@@ -220,9 +220,9 @@ body{
 @media screen and (prefers-color-scheme:dark){
     :root{
         /* Colores principales */
-        --blanco : black;
-        --negro  : white;
+        --white : black;
+        --black  : white;
     
-        --borde-negro : #FFFFFF50;
+        --border-black : #FFFFFF50;
    }
 }
