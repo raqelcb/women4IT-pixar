@@ -1,0 +1,228 @@
+:root{
+    /* Colores principales */
+    --blanco : white;
+    --negro  : black;
+
+    --borde-negro : #00000050;
+
+    /* Tipografia */
+    --tipo-principal  : 'Open Sans', sans-serif;
+    --tipo-secundaria : 'Open Sans', sans-serif;
+    --tipo-terciaria  : 'Open Sans', sans-serif;
+}
+
+*{  
+    margin:0;
+    padding:0;
+    border:0;
+    box-sizing: border-box;
+}
+a{
+    display: block;
+    color:inherit;
+    text-decoration: none;
+}
+p a{
+    display: inline-flex;
+}
+h1 , h2 , h3 , h4 , h5 , h6 , strong{
+    font-size: inherit;
+    font-weight: inherit;
+}
+img{
+    width:100%;
+    display: block;
+    object-fit: cover;
+}
+.clear::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+body{
+    font-size: 100%;
+    font-family: var(--tipo-principal);
+    background-color: var(--blanco);
+    color:var(--negro);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+} 
+
+
+.header{
+    width:100%;
+    background-color: var(--blanco);
+    padding: 1.2em 0;    
+}
+
+.header .content_centered{
+    width: 80%;
+    margin: auto;   
+}
+.header .fa-bars{
+    display: none;
+    float: right;
+    margin:.3em 0 0 ;
+}
+.header .content_centered .logo{
+    width: 100%;
+    max-width: 9.3em;
+    float:left;
+}
+.header .content_centered .header_menu{
+    width: calc( 90% - 9.3em );
+    float: right;
+    margin:.65em 0 0;
+    
+}
+.header .content_centered .header_menu .header_item{
+     margin: 0 0 0 .8em;
+     font-weight: 600;
+     float: right;
+}
+
+
+
+.main{
+    width:100%;
+    min-height: 100vh;
+    background-image: url(../assets/img/bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: initial;
+}
+.main .logo{
+    width:90%;
+    max-width: 47.5em;
+    min-height: 3em;
+}
+
+
+
+.main_grid{
+    width:100%;
+    padding: 10vh 0;
+}
+.main_grid .content_centered{
+    width: 80%;
+    margin: auto;
+}
+.main_grid .content_centered .main_block{
+    width: calc( 100% / 3 - 20px );
+    float: left;
+    margin:0 30px 0 0;
+}
+/* Pseudoselectores */
+.main_grid .content_centered .main_block:last-child{
+    margin:0;
+}
+.main_grid .content_centered .main_block .image{
+    width:100%;
+    min-height: 12.5em;
+    margin: 0 0 2.5em 0;
+}
+.main_grid .content_centered .main_block .main_content{
+    width: 100%;
+    font-weight: 700;
+    
+}
+
+
+
+
+.footer{
+    width:100%;
+    min-height: 12.5em;
+    font-size: .8em;    
+}
+.footer .footer_rrss{
+    width:  100%;
+    min-height: 50px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: initial;
+}
+
+.footer .footer_rrss .footer_social{
+    min-height: 3em;
+    margin: 0 .85em;
+}
+.footer .footer_rrss .footer_social .fab{
+    font-size: 2em;
+}
+.footer p.footer_links{
+    width: 70%;
+    min-height: 3em;
+    margin: 1.2em auto;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: initial;
+    align-content: center;
+}
+.footer p.footer_links a.footer_link{
+    min-height: 1.2em;
+    margin: 0 .8em;
+    padding: 0 0 .2em;
+    border-bottom:1px solid var(--borde-negro);
+    
+}
+.footer .footer_copy{
+    width:50%;
+    margin: auto;
+}
+
+
+
+@media screen and (max-width:1024px){
+    body{
+        font-size: 80%;
+    }
+}
+
+@media screen and (max-width:960px){
+    .main_grid .content_centered .main_block{
+        width: 100%; 
+        margin: 0 0 3em;
+    }
+    .header .content_centered .header_menu{
+        display: none;
+    }
+    .header .fa-bars{
+        display: flex;
+        font-size: 1.7em;
+    }
+    .main{
+        background-attachment: scroll;
+    }
+    .main_grid{
+        padding: 10vh 0 4vh;
+    }
+    .footer p.footer_links a.footer_link{
+        margin: .4em 0;
+        font-size: .8em;
+        border: 0;
+    }
+}
+
+
+@media screen and (prefers-color-scheme:dark){
+    :root{
+        /* Colores principales */
+        --blanco : black;
+        --negro  : white;
+    
+        --borde-negro : #FFFFFF50;
+   }
+}
