@@ -132,17 +132,20 @@ body{
 .main {
     background-color: var(--white);
 }
+.main .fas{
+    display: none;
+}
 .main .main__head{
     width:100%;
     min-height: 100vh;
     background-image: url(../assets/img/bg.jpg);
-    background-position: center; /* bottom*/
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; /*auto 100%*/
+    background-size: auto 100%;
     background-attachment: fixed;
 
     display: flex;
-    flex-flow: row wrap; /*column wrap*/
+    flex-flow: column wrap;
     justify-content: center;
     align-items: center;
     align-content: initial;
@@ -158,7 +161,7 @@ body{
     margin: auto;
     margin-top: 11em;
 }
-.main__grid{
+.main .main__grid{
     width:100%;
     margin: 9em 0;
     padding: 10vh 0;
@@ -172,8 +175,7 @@ body{
     text-transform: uppercase;
     letter-spacing: .25em;
 }
-/*revisar con el main__grid*/
-.main .centered {
+.main .centered{
     width: 80%;
     margin: auto;
     align-items: top;
