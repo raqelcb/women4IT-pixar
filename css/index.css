@@ -186,8 +186,6 @@ body{
 .main .main__block:hover{
     color: var(--grey-hover);
 }
-
-
 .main .main__block{
     width: calc( 100% / 3 - 20px );
     float: left;
